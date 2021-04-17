@@ -1,0 +1,1 @@
+dotnet pack Synnotech.DatabaseAbstractions.csproj --configuration Release /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=bin\Synnotech.DatabaseAbstractions.snk /p:ContinuousIntegrationBuild=true
