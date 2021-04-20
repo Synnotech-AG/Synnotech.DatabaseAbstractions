@@ -5,16 +5,15 @@ namespace Synnotech.DatabaseAbstractions
     /// <summary>
     /// Represents a synchronous session to a database. The
     /// connection to the database can be terminated by calling
-    /// <see cref="IDisposable.Dispose"/>. Changes can be saved
+    /// <see cref="IDisposable.Dispose"/>. Changes can be saved or committed
     /// to the database by calling <see cref="SaveChanges"/>.
     /// PLEASE REMEMBER: database calls should be performed asynchronously
     /// by default, especially in service apps to avoid blocking threads.
-    /// You should prefer to use the <see cref="IAsyncSession"/> interface instead.
+    /// Consider using the <see cref="IAsyncSession"/> interface instead.
     /// </summary>
     /// <remarks>
     /// Conceptually, a session is identical to a "Unit of Work".
-    /// Session for us is just a term that is simpler to use in
-    /// daily life.
+    /// The term "session" is just simpler to use in daily life.
     /// </remarks>
     public interface ISession : IDisposable
     {
