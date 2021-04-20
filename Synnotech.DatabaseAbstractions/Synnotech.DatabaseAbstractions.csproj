@@ -10,6 +10,7 @@
 		<LangVersion>9.0</LangVersion>
 		<Nullable>enable</Nullable>
 		<IsPackable>true</IsPackable>
+		<TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">true</TreatWarningsAsErrors>
 		<DocumentationFile>bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).xml</DocumentationFile>
 		<PackageIcon>synnotech-logo.png</PackageIcon>
 		<PackageProjectUrl>https://github.com/Synnotech-AG/Synnotech.DatabaseAbstractions</PackageProjectUrl>
