@@ -5,7 +5,7 @@
 		<Authors>Synnotech AG</Authors>
 		<Company>Synnotech AG</Company>
 		<Copyright>Copyright © Synnotech AG 2021</Copyright>
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 		<Description>Common abstractions for database access in .NET.</Description>
 		<LangVersion>9.0</LangVersion>
 		<Nullable>enable</Nullable>
@@ -22,10 +22,11 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReleaseNotes>
-Synntech.DatabaseAbstractions 1.1.0
+Synntech.DatabaseAbstractions 1.1.1
 --------------------------------
 
 - added interfaces to support individual transactions
+- fixed return type for `IAsyncTransactionalSession.BeginTransactionAsync`
 		</PackageReleaseNotes>
 	</PropertyGroup>
 
