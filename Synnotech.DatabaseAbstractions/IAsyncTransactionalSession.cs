@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Synnotech.DatabaseAbstractions
 {
@@ -17,6 +18,6 @@ namespace Synnotech.DatabaseAbstractions
         /// Creates a new transaction. Please ensure not to call this method while another transaction
         /// is still active in your current scope (to avoid nesting transactions).
         /// </summary>
-        IAsyncTransaction BeginTransactionAsync();
+        Task<IAsyncTransaction> BeginTransactionAsync();
     }
 }
