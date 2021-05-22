@@ -12,7 +12,7 @@ namespace Synnotech.DatabaseAbstractions
     /// consider using the <see cref="IAsyncSession"/> interface instead. Avoid nesting of several transactions
     /// as the interfaces in this package do not cover trees of transactions.
     /// </summary>
-    public interface IAsyncTransactionalSession : IAsyncDisposable, IDisposable
+    public interface IAsyncTransactionalSession : IAsyncReadOnlySession
     {
         /// <summary>
         /// Creates a new transaction. Please ensure not to call this method while another transaction

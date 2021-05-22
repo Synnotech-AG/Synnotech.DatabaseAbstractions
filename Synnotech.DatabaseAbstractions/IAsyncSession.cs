@@ -13,7 +13,7 @@ namespace Synnotech.DatabaseAbstractions
     /// Conceptually, a session is identical to a "Unit of Work".
     /// The term "session" is just simpler to use in daily life.
     /// </remarks>
-    public interface IAsyncSession : IDisposable, IAsyncDisposable
+    public interface IAsyncSession : IAsyncReadOnlySession
     {
         /// <summary>
         /// Writes or commits all changes that occurred during the session to the target database.
