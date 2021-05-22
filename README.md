@@ -24,6 +24,8 @@ This package offers interfaces and abstract base classes for accessing databases
 
 However, some data access libraries do not support asynchronous queries. As of April 2021, Oracle e.g. did not override the asynchronous methods of ADO.NET - all calls will always be executed synchronously (even when you call the async APIs, like `DbConnection.OpenAsync`). You can resort to `ISession` in these circumstances.
 
+There is also an `IAsyncReadOnlySession` interface that derives from both `IDisposable` and `IAsyncDisposable`. It can be used to abstract from sessions that only read data.
+
 ## Sessions with several transactions
 
 If you need to support individual transactions during a database session, then use the `IAsyncTransactionalSession` (or `ITransactionalSession`) interfaces. Instead of a `SaveChangesAsync` method, you can use this session type to manually begin transactions by calling `BeginTransactionAsync`. You can then save your changes by committing the transaction. Please be aware that you should not nest transaction, i.e. you should not call `BeginTransactionAsync` again while you still have an existing transaction in your current scope.
