@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Synnotech.DatabaseAbstractions
@@ -13,6 +14,7 @@ namespace Synnotech.DatabaseAbstractions
         /// <summary>
         /// Commits the changes made during this transaction to the database.
         /// </summary>
-        Task CommitAsync();
+        /// <param name="cancellationToken">The token to cancel this asynchronous operation (optional).</param>
+        Task CommitAsync(CancellationToken cancellationToken = default);
     }
 }

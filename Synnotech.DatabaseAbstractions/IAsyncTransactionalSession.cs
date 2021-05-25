@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Synnotech.DatabaseAbstractions
@@ -18,6 +19,7 @@ namespace Synnotech.DatabaseAbstractions
         /// Creates a new transaction. Please ensure not to call this method while another transaction
         /// is still active in your current scope (to avoid nesting transactions).
         /// </summary>
-        Task<IAsyncTransaction> BeginTransactionAsync();
+        /// <param name="cancellationToken">The token to cancel this asynchronous operation (optional).</param>
+        Task<IAsyncTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default);
     }
 }
