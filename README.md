@@ -4,7 +4,7 @@
 [![Synnotech Logo](synnotech-large-logo.png)](https://www.synnotech.de/)
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/Synnotech-AG/Synnotech.DatabaseAbstractions/blob/main/LICENSE)
-[![NuGet](https://img.shields.io/badge/NuGet-1.3.0-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Synnotech.DatabaseAbstractions/)
+[![NuGet](https://img.shields.io/badge/NuGet-2.0.0-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Synnotech.DatabaseAbstractions/)
 
 # How to Install
 
