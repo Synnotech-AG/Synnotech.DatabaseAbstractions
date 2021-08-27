@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 
 namespace Synnotech.DatabaseAbstractions
 {
@@ -19,8 +20,9 @@ namespace Synnotech.DatabaseAbstractions
     {
         /// <summary>
         /// Creates a new session instance and opens the connection to the target database asynchronously. This
-        /// usually involves starting a transaction.
+        /// can involve starting a transaction.
         /// </summary>
-        ValueTask<TSessionAbstraction> OpenSessionAsync();
+        /// <param name="cancellationToken">The token to cancel this asynchronous operation (optional).</param>
+        ValueTask<TSessionAbstraction> OpenSessionAsync(CancellationToken cancellationToken = default);
     }
 }

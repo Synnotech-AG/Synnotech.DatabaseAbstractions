@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Synnotech.DatabaseAbstractions
@@ -18,6 +19,7 @@ namespace Synnotech.DatabaseAbstractions
         /// <summary>
         /// Writes or commits all changes that occurred during the session to the target database.
         /// </summary>
-        Task SaveChangesAsync();
+        /// <param name="cancellationToken">The token to cancel this asynchronous operation (optional).</param>
+        Task SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }
